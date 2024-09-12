@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+body {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("https://cdn.prod.website-files.com/638344deb1250235ea1b203b/66e305d47ee49e61cf42c5b7_AuraClock_4.webp");
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: hidden; /* Show vertical scrollbar if needed */
+  transition: background-image 0.5s ease-in-out; /*Smooth Transition between background image*/
+}
+
+.background-image-1 {
+  background-image: url("https://cdn.prod.website-files.com/638344deb1250235ea1b203b/66e305d40e6e153a4cca237b_AuraClock_2.webp");
+}
+
+.background-image-2 {
+  background-image: url("https://cdn.prod.website-files.com/638344deb1250235ea1b203b/66e305d4e6311a54c0e9db7d_AuraClock_3.webp");
+}
+
+.background-image-3 {
+  background-image: url("https://cdn.prod.website-files.com/638344deb1250235ea1b203b/66e305d4cb22b34401895fe1_AuraClock_1.webp");
+}
+
+#clock {
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  color: inherit;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#time {
+  color: inherit;
+  font-size: 15rem;
+  font-weight: bold;
+  display: inline-block;
+  letter-spacing: -2px;
+}
+
+#am-pm {
+  color: inherit;
+  font-size: 30px;
+  display: inline-block;
+  margin-left: 0px;
+}
+
+#setting-wrapper {
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /*Button on Hover */
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+body:hover #setting-wrapper {
+  opacity: 1;
+}
+
+body.black-theme {
+  color: #191919;
+}
+
+body.white-theme {
+  color: #FFFFFF;
+}
+
+#switch-btn,
+#theme-btn,
+#font-btn {
+  font-family: Karla;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; /* This changes the cursor to a hand icon on hover */
+}
+/* Media Queries */
+@media (max-width: 1200px) {
+  #time {
+    font-size: 10rem; /* Adjust font size for medium screens */
+  }
+
+  #am-pm {
+    font-size: 24px; /* Adjust font size for medium screens */
+  }
+
+  #setting-wrapper {
+    bottom: 15px; /* Adjust position for medium screens */
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #time {
+    font-size: 7rem; /* Adjust font size for small screens */
+  }
+
+  #am-pm {
+    font-size: 20px; /* Adjust font size for small screens */
+  }
+
+  #setting-wrapper {
+    bottom: 10px; /* Adjust position for small screens */
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #time {
+    font-size: 5rem; /* Adjust font size for very small screens */
+  }
+
+  #am-pm {
+    font-size: 18px; /* Adjust font size for very small screens */
+  }
+
+  #setting-wrapper {
+    bottom: 5px; /* Adjust position for very small screens */
+    right: 5px;
+  }
+}
